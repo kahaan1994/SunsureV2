@@ -31,7 +31,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onToggleAdmin, isAdminOpen }) =>
         </a>
         <button
           onClick={onToggleAdmin}
-          className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 shadow-lg ${isAdminOpen
+          className={`hidden items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 shadow-lg ${isAdminOpen
               ? 'bg-white text-zinc-900 hover:bg-zinc-100'
               : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
             }`}
