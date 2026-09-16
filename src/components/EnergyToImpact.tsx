@@ -42,7 +42,7 @@ export const EnergyToImpact: React.FC = () => {
   // Drag and swipe states
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [isDragging, setIsDragging] = useState(false);
-  const wheelTimeout = useRef<NodeJS.Timeout | null>(null);
+  const wheelTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   
   const prefersReducedMotion = useReducedMotion();
 
@@ -114,7 +114,7 @@ export const EnergyToImpact: React.FC = () => {
       y: 0,
       transition: {
         duration: TRANSITION_DURATION,
-        ease: [0.16, 1, 0.3, 1] // Premium ease-out
+        ease: [0.16, 1, 0.3, 1] as any // Premium ease-out
       }
     },
     exit: { 
@@ -122,7 +122,7 @@ export const EnergyToImpact: React.FC = () => {
       y: prefersReducedMotion ? 0 : -12,
       transition: {
         duration: TRANSITION_DURATION * 0.8,
-        ease: [0.16, 1, 0.3, 1]
+        ease: [0.16, 1, 0.3, 1] as any
       }
     }
   };
@@ -137,7 +137,7 @@ export const EnergyToImpact: React.FC = () => {
       scale: 1,
       transition: {
         duration: TRANSITION_DURATION,
-        ease: 'easeOut'
+        ease: 'easeOut' as any
       }
     },
     exit: { 
@@ -145,7 +145,7 @@ export const EnergyToImpact: React.FC = () => {
       scale: 1,
       transition: {
         duration: TRANSITION_DURATION,
-        ease: 'easeOut'
+        ease: 'easeOut' as any
       }
     }
   };

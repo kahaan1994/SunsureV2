@@ -20,7 +20,7 @@ const uploadPlugin = () => {
 
       const storage = multer.diskStorage({
         destination: uploadDir,
-        filename: (req, file, cb) => {
+        filename: (_req: any, file: any, cb: any) => {
           cb(null, `${Date.now()}-${file.originalname}`);
         }
       });
@@ -31,7 +31,7 @@ const uploadPlugin = () => {
         if (req.method !== 'POST') return next();
         
         let body = '';
-        req.on('data', chunk => {
+        req.on('data', (chunk: any) => {
           body += chunk.toString();
         });
         

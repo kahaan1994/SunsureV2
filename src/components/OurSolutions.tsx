@@ -193,7 +193,7 @@ export const OurSolutions: React.FC = () => {
 
           {/* Three Solution Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-            {displayData.cards.map((card, i) => (
+            {displayData.cards.map((card) => (
               <div 
                 key={card.title}
                 className="group flex flex-col bg-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 hover:bg-black/30 hover:border-white/20 transition-all duration-500"

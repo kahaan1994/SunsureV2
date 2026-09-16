@@ -58,7 +58,7 @@ export const KnowledgeHub: React.FC = () => {
 
   // Optional Auto-Scroll
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: ReturnType<typeof setTimeout>;
     
     const startScroll = () => {
       interval = setInterval(() => {
@@ -192,7 +192,7 @@ export const KnowledgeHub: React.FC = () => {
             }`}
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
-            {KNOWLEDGE_HUB_ARTICLES.map((article, index) => (
+            {KNOWLEDGE_HUB_ARTICLES.map((article) => (
               <a
                 href={article.url}
                 key={article.id}

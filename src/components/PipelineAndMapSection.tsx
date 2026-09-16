@@ -7,7 +7,7 @@ export const PipelineAndMapSection: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [progress, setProgress] = useState(0);
-  const [isMapPaused, setIsMapPaused] = useState(false);
+  const [, setIsMapPaused] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -92,7 +92,7 @@ export const PipelineAndMapSection: React.FC = () => {
         >
           <MapProjects
             scrollProgress={mapProgress}
-            isPaused={isMapPaused}
+
             setIsPaused={setIsMapPaused}
           />
         </div>

@@ -98,7 +98,7 @@ export const CommissionedProjects: React.FC = () => {
               style={{ opacity: activeIndex === index ? 1 : 0, zIndex: activeIndex === index ? 10 : 0 }}
             >
               <video 
-                ref={el => videoRefs.current[index] = el}
+                ref={el => { videoRefs.current[index] = el; }}
                 src={slide.videoSrc}
                 poster={slide.poster}
                 muted={isMuted}

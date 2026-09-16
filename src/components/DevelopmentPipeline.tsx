@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 
 const STAGES = [
   {
@@ -80,7 +80,7 @@ export const DevelopmentPipeline: React.FC<{ progress: number }> = ({ progress }
           </svg>
 
           {/* Desktop Stages */}
-          {STAGES.map((stage, i) => {
+          {STAGES.map((stage) => {
             const isActive = progress >= stage.threshold;
             
             return (

@@ -197,7 +197,7 @@ export const SunsureAdvantage: React.FC = () => {
                 // Static wrapper to measure precise grid layout bounds without transform interference
                 <div 
                   key={card.id}
-                  ref={(el) => (wrapperRefs.current[index] = el)}
+                  ref={(el) => { wrapperRefs.current[index] = el; }}
                   className={`relative w-full md:w-[280px] lg:w-[320px] h-[400px] md:h-[480px] ${card.marginTop} cursor-pointer`}
                   onClick={() => handleCardClick(index)}
                 >

@@ -34,7 +34,7 @@ const AnimatedNumber: React.FC<{ value: number; decimals?: number; suffix?: stri
   return <>{current.toFixed(decimals)}{suffix}</>;
 };
 
-export const MapProjects: React.FC<{ scrollProgress: number; isPaused: boolean; setIsPaused: (val: boolean) => void }> = ({ scrollProgress, isPaused, setIsPaused }) => {
+export const MapProjects: React.FC<{ scrollProgress: number;  setIsPaused: (val: boolean) => void }> = ({ scrollProgress, setIsPaused }) => {
   const [svgContent, setSvgContent] = useState<string>('');
   const [centroids, setCentroids] = useState<Record<string, { x: number, y: number }>>({});
   const [activeStep, setActiveStep] = useState<number>(0);

@@ -64,7 +64,7 @@ export const Testimonials: React.FC = () => {
   // Drag and swipe states
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [isDragging, setIsDragging] = useState(false);
-  const wheelTimeout = useRef<NodeJS.Timeout | null>(null);
+  const wheelTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Intersection Observer to start timer when in view
   useEffect(() => {
