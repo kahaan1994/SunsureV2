@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Anek Latin';
+  src: url('/Anek_Latin/AnekLatin-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Anek Latin", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@layer base {
+  body {
+    @apply bg-white text-zinc-900 font-sans;
+    background-color: #ffffff;
+    margin: 0;
+  }
+}
+
+.clip-svg {
+  clip-path: url(#puzzle-clip);
+}
